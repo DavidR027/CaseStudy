@@ -1,4 +1,4 @@
-package com.example.casestudy.presentation
+package com.example.casestudy.data.dc
 
 data class MainScreenState(
     val details:String = "",

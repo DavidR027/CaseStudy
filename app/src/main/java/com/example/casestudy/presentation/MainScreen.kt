@@ -46,7 +46,7 @@ fun MainScreen(viewModel: MainViewModel = hiltViewModel()) {
     var showDialog by remember { mutableStateOf(false) }
     var showFailedDialog by remember { mutableStateOf(false) }
 
-    // Add a new state variable to control the visibility of the LazyColumn
+    //Untuk buka atau tutup riwayat
     var showData by remember { mutableStateOf(false) }
 
     //SharedPreference untuk menyimpan saldo

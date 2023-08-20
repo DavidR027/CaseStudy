@@ -24,6 +24,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.casestudy.R
+import com.example.casestudy.domain.repo.ChartRepository
 import com.example.casestudy.ui.theme.CaseStudyTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -43,12 +44,13 @@ fun SecondScreen() {
 }
 
 @Composable
-fun ThirdScreen() {
-    Text(text = "This is the chart screen")
+fun ThirdScreen(navController: NavController, chartRepository: ChartRepository) {
+    ChartScreen(navController, chartRepository)
 }
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+    private val chartRepository by lazy { ChartRepository(this) }
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -112,9 +114,12 @@ class MainActivity : ComponentActivity() {
                 NavHost(navController, startDestination = "second", Modifier.padding(bottom=60.dp)) {
                     composable("first") { FirstScreen(navController) }
                     composable("second") { SecondScreen() }
-                    composable("third") { ThirdScreen() }
+                    composable("third") { ThirdScreen(navController, chartRepository) }
                     composable("promoDetail/{promoId}") { backStackEntry ->
                         PromoDetailScreen(navController, backStackEntry.arguments?.getString("promoId")!!)
+                    }
+                    composable("chartDetail/{label}") { backStackEntry ->
+                        ChartDetailScreen(navController, backStackEntry.arguments?.getString("label")!!, chartRepository)
                     }
                 }
             }

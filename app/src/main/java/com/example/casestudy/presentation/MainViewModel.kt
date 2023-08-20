@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.room.Room
+import com.example.casestudy.data.dc.MainScreenState
 import com.example.casestudy.roomqr.AppDatabase
 import com.example.casestudy.roomqr.QRData
 import com.example.casestudy.domain.repo.MainRepo

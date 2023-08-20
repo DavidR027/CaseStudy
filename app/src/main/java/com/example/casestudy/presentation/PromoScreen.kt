@@ -31,7 +31,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import coil.compose.rememberImagePainter
-import com.example.casestudy.domain.repo.Promo
+import com.example.casestudy.data.dc.Promo
 import com.example.casestudy.domain.repo.fetchPromos
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
