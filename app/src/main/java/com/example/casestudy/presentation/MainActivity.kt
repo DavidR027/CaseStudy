@@ -1,4 +1,4 @@
-package com.example.casestudy
+package com.example.casestudy.presentation
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -23,9 +23,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.example.casestudy.presentation.MainScreen
-import com.example.casestudy.presentation.PromoDetailScreen
-import com.example.casestudy.presentation.PromoScreen
+import com.example.casestudy.R
 import com.example.casestudy.ui.theme.CaseStudyTheme
 import dagger.hilt.android.AndroidEntryPoint
 

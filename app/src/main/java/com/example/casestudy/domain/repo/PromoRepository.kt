@@ -1,4 +1,4 @@
-package com.example.casestudy.data.repo
+package com.example.casestudy.domain.repo
 
 
 import com.squareup.moshi.JsonAdapter
